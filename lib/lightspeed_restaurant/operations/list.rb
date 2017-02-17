@@ -3,7 +3,8 @@ module LightspeedRestaurant
     module List
       def list(params = {})
         response = JSON.parse(LightspeedRestaurant.get(resource_path, {}, params))
-        instantiate(response['results'])
+        response = response[response.keys.first] if response.is_a?(Hash)
+        instantiate(response)
       end
       alias all list
 
