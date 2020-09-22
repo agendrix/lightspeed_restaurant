@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'lightspeed_restaurant/base'
 require 'lightspeed_restaurant/operations/list'
 
@@ -11,7 +9,7 @@ module LightspeedRestaurant
       'Company'
     end
 
-    def self.default_resource_path
+    def self.resource_path
       "/rest/core/#{resource_name.downcase}"
     end
   end

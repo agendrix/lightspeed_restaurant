@@ -10,10 +10,10 @@ module LightspeedRestaurant
   class Request
     def initialize(base_uri, path, token, body = {}, query = {})
       @base_uri   = base_uri || 'http://staging-exact-integration.posios.com'
-      @headers    = { 'Content-Type' => 'application/json', 'X-Auth-Token' => token }
+      @headers    = { 'Content-Type' => 'application/json', 'Authorization' => 'Bearer ' + token }
       @body       = body.to_json
       @query      = query
-      @path       = '/PosServer' + path
+      @path       = '/resto' + path
       @connection = Excon.new(@base_uri)
     end
 

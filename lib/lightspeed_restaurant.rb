@@ -10,6 +10,7 @@ require 'lightspeed_restaurant/request'
 require 'lightspeed_restaurant/customer'
 require 'lightspeed_restaurant/customer_credit_change'
 require 'lightspeed_restaurant/employee'
+require 'lightspeed_restaurant/company'
 require 'lightspeed_restaurant/receipt'
 
 module LightspeedRestaurant
